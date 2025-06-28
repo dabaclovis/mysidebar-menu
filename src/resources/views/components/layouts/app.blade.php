@@ -52,13 +52,13 @@
                 <li>
                     <button class="dropdown-btn" onclick="toggleSubMenu(this)">
                         <em class="fa fa-folder-open"></em>
-                        <span>Articles</span>
+                        <span>Blog posts</span>
                         <em class="fa fa-chevron-down"></em>
                     </button>
                     <ul class="sub-menu">
                         <div>
-                            <li><a href="">Article 1</a></li>
-                            <li><a href="">Article 2</a></li>
+                            <li><a href="{{ route('articles.index') }}" wire:navigate>Articles</a></li>
+                            <li><a href="{{ route('articles.create') }}" wire:navigate>Create</a></li>
                             <li><a href="">Article 3</a></li>
                             <li><a href="">Article 4</a></li>
                             <li><a href="">Article 5</a></li>
@@ -112,7 +112,7 @@
                 </li>
             </ul>
         </nav>
-        <div id="master" class="container-fluid">
+        <div id="master" class="">
             {{ $slot }}
         </div>
     </div>
